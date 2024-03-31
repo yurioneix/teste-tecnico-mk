@@ -6,4 +6,6 @@ with open("billboard200.csv", encoding="utf-8") as file:
 
     header, *data = billboard200_reader
 
-    print(header)
+    for row in data:
+        billboard_dict = {k: v for (k, v) in zip(header, row)}
+        print(billboard_dict)
